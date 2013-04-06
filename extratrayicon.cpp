@@ -5,6 +5,7 @@ ExtraTrayIcon::ExtraTrayIcon(const QIcon& icon, Window x11_window, Display* x11_
     , x11_window(x11_window)
     , x11_display(x11_display)
     , state(VisibleState)
+    , pid(pid)
 {
     connect(this, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
